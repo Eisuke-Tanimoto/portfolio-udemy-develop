@@ -1,0 +1,35 @@
+@import 'modules/variables';
+@import 'modules/mixin';
+@import 'modules/appear';
+@import 'modules/button';
+@import 'modules/hero-slider';
+@import 'modules/text-animation';
+@import 'modules/image-slide';
+@import 'modules/mobile-menu';
+
+@import "breakpoints/base";
+
+@media screen and (min-width: 480px) {
+  @import "breakpoints/480up";
+  // スマートフォンを横にしたとき
+}
+// 記載量をへらすためmobile.scssをベースに601pxを超えると、desktop.css情報を上書きするようにする。上記だとmobile.scssの情報がベースになる。mobileに追加していく場合はモバイルファーストの設計。基本的にモバイルファーストがよい。
+@media screen and (min-width: 600px) {
+  @import "breakpoints/600up";
+}
+@media screen and (min-width: 960px) {
+  @import "breakpoints/960up";
+}
+@media screen and (min-width: 1280px) {
+  @import "breakpoints/1280up";
+  // 通常のディスプレイ
+}
+
+@media (min-resolution:192dpi),
+        (-webkit-min-device-pixel-ratio: 2){
+          @import "breakpoints/2x";
+}
+
+@media print {
+  @import "breakpoints/print";
+}
